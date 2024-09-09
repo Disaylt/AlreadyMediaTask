@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NasaAsteroid.Infrastructure.Database;
+using NasaAsteroid.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace NasaAsteroid.Infrastructure
             string dbConnection = connectionSection.GetValue<string>("nasaAsteroids") ?? string.Empty;
 
             collection.AddDatabase(dbConnection);
+            collection.AddRepositories();
         }
     }
 }
