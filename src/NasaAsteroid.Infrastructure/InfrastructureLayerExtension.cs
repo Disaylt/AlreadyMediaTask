@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace NasaAsteroid.Infrastructure
 {
-    internal static class InfrastructureLayerExtension
+    public static class InfrastructureLayerExtension
     {
         public static void AddInfrastructureLayer(this IServiceCollection collection, IConfiguration configuration)
         {
