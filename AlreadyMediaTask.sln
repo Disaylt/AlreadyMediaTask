@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FEADA34E-C16
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NasaAsteroid.Domain", "src\NasaAsteroid.Domain\NasaAsteroid.Domain.csproj", "{59EEA892-D398-4314-B78E-52529D6AAFC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NasaAsteroid.Application", "src\NasaAsteroid.Application\NasaAsteroid.Application.csproj", "{6E9F1C1A-7783-4DED-9ADD-5FFD852F10C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +19,17 @@ Global
 		{59EEA892-D398-4314-B78E-52529D6AAFC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59EEA892-D398-4314-B78E-52529D6AAFC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59EEA892-D398-4314-B78E-52529D6AAFC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E9F1C1A-7783-4DED-9ADD-5FFD852F10C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9F1C1A-7783-4DED-9ADD-5FFD852F10C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9F1C1A-7783-4DED-9ADD-5FFD852F10C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9F1C1A-7783-4DED-9ADD-5FFD852F10C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{59EEA892-D398-4314-B78E-52529D6AAFC4} = {FEADA34E-C167-4CCF-8A6D-5A2890160504}
+		{6E9F1C1A-7783-4DED-9ADD-5FFD852F10C0} = {FEADA34E-C167-4CCF-8A6D-5A2890160504}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D14F1EA0-331C-4D89-80E2-694C690EC386}
