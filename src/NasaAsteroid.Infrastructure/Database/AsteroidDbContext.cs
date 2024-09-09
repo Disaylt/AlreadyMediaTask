@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace NasaAsteroid.Infrastructure.Database
 {
-    internal sealed class AsteroidDbContext : DbContext, IUnitOfWork, IDisposable, IAsyncDisposable
+    public sealed class AsteroidDbContext : DbContext, IUnitOfWork, IDisposable, IAsyncDisposable
     {
         public DbSet<Asteroid> Asteroids { get; set; } = null!;
 

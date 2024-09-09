@@ -13,4 +13,10 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NasaAsteroid.Application\NasaAsteroid.Application.csproj" />
+    <ProjectReference Include="..\NasaAsteroid.Domain\NasaAsteroid.Domain.csproj" />
+    <ProjectReference Include="..\NasaAsteroid.Infrastructure\NasaAsteroid.Infrastructure.csproj" />
+  </ItemGroup>
 </Project>
