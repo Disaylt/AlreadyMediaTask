@@ -21,7 +21,7 @@ namespace NasaAsteroid.Application.Utilities
             _asteroidNameTypeUtility = asteroidNameTypeUtility;
         }
 
-        public AsteroidDto FromWeb(AsteroidWebModel asteroid)
+        public virtual AsteroidDto FromWeb(AsteroidWebModel asteroid)
         {
             if(int.TryParse(asteroid.Id, out var id) == false)
             {
