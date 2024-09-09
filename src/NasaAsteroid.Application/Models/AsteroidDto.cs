@@ -13,8 +13,8 @@ namespace NasaAsteroid.Application.Models
         public string Name { get; init; } = "Unknown";
         public string ClassType { get; init; } = "Unknown";
         public double? Mass { get; init; }
-        public decimal? Reclat { get; init; }
-        public decimal? Reclong { get; init; }
+        public decimal? Longitude { get; init; }
+        public decimal? Latitude { get; init; }
         public DateOnly Year { get; init; }
         public FallStatus Fall { get; init; }
         public NameType NameType { get; init; }

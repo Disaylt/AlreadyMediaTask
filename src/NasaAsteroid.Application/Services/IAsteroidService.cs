@@ -10,7 +10,6 @@ namespace NasaAsteroid.Application.Services
 {
     public interface IAsteroidService
     {
-        bool IsNeedUpdate(Asteroid entity, AsteroidDto data);
         Asteroid Build(AsteroidDto data);
     }
 }
