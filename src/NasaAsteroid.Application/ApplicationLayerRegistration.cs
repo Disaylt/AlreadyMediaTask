@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using NasaAsteroid.Application.Behaviors;
+using NasaAsteroid.Application.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace NasaAsteroid.Application
     {
         public static void AddApplicationLayer(this IServiceCollection collection)
         {
+            collection.AddApplicationServices();
+
             collection.AddMediatR(cfg =>
             {
                 cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
