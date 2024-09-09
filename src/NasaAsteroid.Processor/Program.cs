@@ -22,7 +22,7 @@ builder.Services.AddQuartz(opt =>
     opt.AddTrigger(tgOpt => tgOpt
         .ForJob(asteroidsUplodingJobkey)
         .WithIdentity($"{asteroidsUplodingJobkey.Name}-t")
-        .StartAt(DateTime.Now.AddSeconds(5))
+        .StartAt(DateTime.Now.AddSeconds(10))
         .WithSimpleSchedule(scheduleOpt => scheduleOpt
         .WithIntervalInSeconds(30)
         .RepeatForever()));

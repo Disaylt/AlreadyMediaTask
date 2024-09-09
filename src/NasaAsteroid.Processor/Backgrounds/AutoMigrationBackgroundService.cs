@@ -19,6 +19,8 @@ namespace NasaAsteroid.Processor.Backgrounds
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            await Task.Delay(TimeSpan.FromSeconds(5));
+
             using IServiceScope scope = _serviceProvider.CreateScope();
 
             await scope
