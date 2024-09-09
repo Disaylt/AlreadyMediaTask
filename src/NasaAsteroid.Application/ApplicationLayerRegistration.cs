@@ -18,6 +18,7 @@ namespace NasaAsteroid.Application
                 cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
 
                 cfg.AddOpenBehavior(typeof(ValidatorBehavior<,>));
+                cfg.AddOpenBehavior(typeof(TransactionBehavior<,>));
             });
         }
     }
