@@ -21,7 +21,7 @@ namespace NasaAsteroid.Infrastructure.Database
 
         public bool HasTransaction => _transaction != null;
 
-        public AsteroidDbContext(IMediator mediator)
+        public AsteroidDbContext(DbContextOptions<AsteroidDbContext> options, IMediator mediator) : base(options)
         {
             _mediator = mediator;
         }
