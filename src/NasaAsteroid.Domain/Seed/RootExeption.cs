@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NasaAsteroid.Domain.Seed
 {
-    public class RootExeption
+    public class RootExeption : Exception
     {
         public HttpStatusCode StatusCode { get; }
         public IEnumerable<string> Messages { get; }

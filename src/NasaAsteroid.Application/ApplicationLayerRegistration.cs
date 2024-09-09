@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using NasaAsteroid.Application.Behaviors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,8 @@ namespace NasaAsteroid.Application
             collection.AddMediatR(cfg =>
             {
                 cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+
+                cfg.AddOpenBehavior(typeof(ValidatorBehavior<,>));
             });
         }
     }
