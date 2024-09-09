@@ -14,7 +14,7 @@ namespace NasaAsteroid.Domain.ValueObjects
         {
             if (value.HasValue && value <= 0)
             {
-                throw new ArgumentException("Mass cannot be less than 0");
+                throw new ArgumentException($"Mass cannot be less than 0, value - {value.Value}");
             }
 
             Value = value;

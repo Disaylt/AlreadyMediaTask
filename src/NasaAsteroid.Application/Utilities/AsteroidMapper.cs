@@ -35,7 +35,7 @@ namespace NasaAsteroid.Application.Utilities
             return new AsteroidDto
             {
                 Id = id,
-                Mass = isValidLatitude ? mass : null,
+                Mass = isValidMass ? mass : null,
                 Longitude = isValidLongitude ? longitude : null,
                 Latitude = isValidLatitude ? latitude : null,
                 ClassType = asteroid.Recclass,
