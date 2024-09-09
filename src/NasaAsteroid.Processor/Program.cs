@@ -5,6 +5,10 @@ using NasaAsteroid.Processor.Jobs;
 using Quartz;
 
 var builder = Host.CreateApplicationBuilder(args);
+
+builder.AddServiceDefaults();
+
+builder.Services.AddOpenTelemetry();
 builder.Services.AddApplicationLayer();
 builder.Services.AddInfrastructureLayer(builder.Configuration);
 
