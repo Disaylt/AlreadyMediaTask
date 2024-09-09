@@ -10,6 +10,6 @@ namespace NasaAsteroid.Domain.Repositories
 {
     public interface IAsteroidRepository : IRepository<Asteroid>
     {
-        Task<Dictionary<int, Asteroid>> GetBusketAsync(IEnumerable<int> ids, CancellationToken cancellationToken);
+        Task<Dictionary<int, Asteroid>> GetBucketAsync(IEnumerable<int> ids, CancellationToken cancellationToken);
     }
 }
