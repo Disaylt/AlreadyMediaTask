@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using NasaAsteroid.Domain.Entities;
 using NasaAsteroid.Domain.Seed;
+using NasaAsteroid.Infrastructure.EntityConfigurations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,7 @@ namespace NasaAsteroid.Infrastructure.Database
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasDefaultSchema("nasaAsteroids");
+            modelBuilder.ApplyConfiguration(new AsteroidEntityConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
