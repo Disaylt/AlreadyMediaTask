@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NasaAsteroid.Domain\NasaAsteroid.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
