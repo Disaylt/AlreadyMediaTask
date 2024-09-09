@@ -11,7 +11,7 @@ namespace NasaAsteroid.Application.Services
 {
     internal class AsteroidService : IAsteroidService
     {
-        public Asteroid Build(AsteroidDto data)
+        public virtual Asteroid Build(AsteroidDto data)
         {
             return new Asteroid(data.Id,
                 data.Name,
