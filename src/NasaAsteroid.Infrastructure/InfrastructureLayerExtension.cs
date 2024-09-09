@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NasaAsteroid.Infrastructure.Database;
+using NasaAsteroid.Infrastructure.HttpClients;
 using NasaAsteroid.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace NasaAsteroid.Infrastructure
 
             collection.AddDatabase(dbConnection);
             collection.AddRepositories();
+            collection.AddOwnHttpClients();
         }
     }
 }
