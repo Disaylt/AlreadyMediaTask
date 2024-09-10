@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 
 namespace NasaAsteroid.Application.Specifications
 {
-    public class GetAsteroidsSpecification : BaseAsteroidsSpecification
+    public class GetAsteroidsGroupYearSpecification : BaseAsteroidsSpecification
     {
-
     }
 }
