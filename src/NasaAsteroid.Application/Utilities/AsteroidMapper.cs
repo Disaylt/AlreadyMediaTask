@@ -1,4 +1,5 @@
 ﻿using NasaAsteroid.Application.Models;
+using NasaAsteroid.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -19,6 +20,22 @@ namespace NasaAsteroid.Application.Utilities
         {
             _asteroidFallStatusUtility = asteroidFallStatusUtility;
             _asteroidNameTypeUtility = asteroidNameTypeUtility;
+        }
+
+        public AsteroidDto FromEntity(Asteroid entity)
+        {
+            return new AsteroidDto
+            {
+                ClassType = entity.ClassType,
+                Year = entity.Year.Value,
+                Fall = entity.FallStaus,
+                Id = entity.Id,
+                Latitude = entity.Coordinates.Latitude,
+                Longitude = entity.Coordinates.Longitude,
+                Mass = entity.Mass.Value,
+                Name = entity.Name,
+                NameType = entity.NameType
+            };
         }
 
         public virtual AsteroidDto FromWeb(AsteroidWebModel asteroid)
@@ -42,7 +59,7 @@ namespace NasaAsteroid.Application.Utilities
                 Fall = _asteroidFallStatusUtility.Convert(asteroid.Fall),
                 Name = asteroid.Name,
                 NameType = _asteroidNameTypeUtility.Convert(asteroid.Name),
-                Date = DateOnly.FromDateTime(asteroid.Date)
+                Year = asteroid.Date.Year
             };
         }
     }

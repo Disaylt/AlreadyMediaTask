@@ -16,7 +16,7 @@ namespace NasaAsteroid.Application.Services
             return new Asteroid(data.Id,
                 data.Name,
                 new Mass(data.Mass),
-                new Year(data.Date.Year),
+                new Year(data.Year),
                 new Coordinates(data.Longitude, data.Latitude),
                 data.Fall,
                 data.NameType,

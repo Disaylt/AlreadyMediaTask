@@ -12,6 +12,6 @@ namespace NasaAsteroid.Application.Queries
 {
     public class GetAsteroidsQuery : IRequest<IEnumerable<AsteroidDto>>
     {
-        public required GetAsteroidsSpecification Queries { get; set; }
+        public required GetAsteroidsSpecification Specification { get; set; }
     }
 }

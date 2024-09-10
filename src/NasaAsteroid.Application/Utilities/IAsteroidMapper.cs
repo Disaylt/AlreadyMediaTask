@@ -1,4 +1,5 @@
 ﻿using NasaAsteroid.Application.Models;
+using NasaAsteroid.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace NasaAsteroid.Application.Utilities
     public interface IAsteroidMapper
     {
         AsteroidDto FromWeb(AsteroidWebModel asteroid);
+        AsteroidDto FromEntity(Asteroid entity);
     }
 }
