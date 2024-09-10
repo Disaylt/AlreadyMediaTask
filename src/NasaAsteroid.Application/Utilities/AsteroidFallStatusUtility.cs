@@ -11,9 +11,10 @@ namespace NasaAsteroid.Application.Utilities
     {
         public virtual FallStatus Convert(string fallStatus)
         {
-            return fallStatus.ToLower() switch
+            string lowerFallStatus = fallStatus.ToLower();
+            return lowerFallStatus switch
             {
-                "fall" => FallStatus.Fell,
+                "fell" => FallStatus.Fell,
                 "found" => FallStatus.Found,
                 _ => FallStatus.Unknown
             };

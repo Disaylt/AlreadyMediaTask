@@ -11,7 +11,8 @@ namespace NasaAsteroid.Application.Utilities
     {
         public NameType Convert(string value)
         {
-            return value.ToLower() switch
+            string lowerValue = value.ToLower();
+            return lowerValue switch
             {
                 "valid" => NameType.Valid,
                 _ => NameType.Unknown

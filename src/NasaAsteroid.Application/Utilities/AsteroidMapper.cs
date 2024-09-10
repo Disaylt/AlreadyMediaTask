@@ -58,7 +58,7 @@ namespace NasaAsteroid.Application.Utilities
                 ClassType = asteroid.Recclass,
                 Fall = _asteroidFallStatusUtility.Convert(asteroid.Fall),
                 Name = asteroid.Name,
-                NameType = _asteroidNameTypeUtility.Convert(asteroid.Name),
+                NameType = _asteroidNameTypeUtility.Convert(asteroid.Nametype),
                 Year = asteroid.Date.Year
             };
         }
