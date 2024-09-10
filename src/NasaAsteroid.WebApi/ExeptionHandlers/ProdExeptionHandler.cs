@@ -18,19 +18,13 @@ namespace NasaAsteroid.WebApi.ExeptionHandlers
             {
                 error.Status = (int)rootExeption.StatusCode;
                 error.Title = "Service error";
-                error.Errors = new Dictionary<string, IEnumerable<string>>
-                {
-                    {"Details", rootExeption.Messages }
-                };
+                error.Errors.Add("Details", rootExeption.Messages);
             }
             else
             {
                 error.Status = 400;
                 error.Title = "Unknown error";
-                error.Errors = new Dictionary<string, IEnumerable<string>>
-                {
-                    {"Details", new [] { "Произошла ошибка на сервере, но я всё равно выдам 400. Ведь сервер хорошй, а ты нет ^-^" } }
-                };
+                error.Errors.Add("Details", ["Произошла ошибка на сервере, но я всё равно выдам 400. Ведь сервер хорошй, а ты нет ^-^"]);
             }
 
             httpContext.Response.StatusCode = error.Status;
