@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NasaAsteroid.Processor\NasaAsteroid.Processor.csproj" />
+    <ProjectReference Include="..\NasaAsteroid.WebApi\NasaAsteroid.WebApi.csproj" />
   </ItemGroup>
 
 </Project>

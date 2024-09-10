@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlreadyMedia.AppHost", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlreadyMedia.ServiceDefaults", "src\AlreadyMedia.ServiceDefaults\AlreadyMedia.ServiceDefaults.csproj", "{C87AC4BA-D352-44D2-A3DB-7C2F93D97810}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NasaAsteroid.WebApi", "src\NasaAsteroid.WebApi\NasaAsteroid.WebApi.csproj", "{28490058-B606-426C-88BF-DDD43DA6EA6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{C87AC4BA-D352-44D2-A3DB-7C2F93D97810}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C87AC4BA-D352-44D2-A3DB-7C2F93D97810}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C87AC4BA-D352-44D2-A3DB-7C2F93D97810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28490058-B606-426C-88BF-DDD43DA6EA6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28490058-B606-426C-88BF-DDD43DA6EA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28490058-B606-426C-88BF-DDD43DA6EA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28490058-B606-426C-88BF-DDD43DA6EA6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{92ABF650-6AAE-4431-B538-3C636860BBD6} = {FEADA34E-C167-4CCF-8A6D-5A2890160504}
 		{D52EFDAD-9150-405C-8031-B7C40BA49EF0} = {FEADA34E-C167-4CCF-8A6D-5A2890160504}
 		{C87AC4BA-D352-44D2-A3DB-7C2F93D97810} = {FEADA34E-C167-4CCF-8A6D-5A2890160504}
+		{28490058-B606-426C-88BF-DDD43DA6EA6F} = {FEADA34E-C167-4CCF-8A6D-5A2890160504}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D14F1EA0-331C-4D89-80E2-694C690EC386}
