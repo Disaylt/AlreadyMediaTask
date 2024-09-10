@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NasaAsteroid.Infrastructure.Cache;
 using NasaAsteroid.Infrastructure.Database;
 using NasaAsteroid.Infrastructure.HttpClients;
 using NasaAsteroid.Infrastructure.Repositories;
@@ -19,11 +20,13 @@ namespace NasaAsteroid.Infrastructure
             IConfigurationSection connectionSection = configuration.GetSection("ConnectionStrings");
 
             string dbConnection = connectionSection.GetValue<string>("nasaAsteroids") ?? string.Empty;
+            string redisConnection = connectionSection.GetValue<string>("redis") ?? string.Empty;
 
             collection.AddDatabase(dbConnection);
             collection.AddRepositories();
             collection.AddOwnHttpClients();
             collection.AddSpecificationExecutors();
+            collection.AddChache(redisConnection);
         }
     }
 }

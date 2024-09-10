@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using NasaAsteroid.Domain.Seed;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace NasaAsteroid.Infrastructure.Cache
             {
                 options.Configuration = connectionString;
             });
+            collection.AddSingleton(typeof(ICacheRepository<>), typeof(CacheRepository<>));
         }
     }
 }

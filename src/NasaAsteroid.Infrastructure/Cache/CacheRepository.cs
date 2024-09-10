@@ -63,9 +63,9 @@ namespace NasaAsteroid.Infrastructure.Cache
             });
         }
 
-        private string BuildKey<T>(string key)
+        private string BuildKey<TKey>(string key)
         {
-            return $"{typeof(T).FullName}-{key}";
+            return $"{typeof(TKey).FullName}-{key}";
         }
     }
 }

@@ -1,15 +1,17 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Logging;
+using NasaAsteroid.Application.Commands;
 using NasaAsteroid.Domain.Seed;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace NasaAsteroid.Application.Behaviors
 {
-    public class TransactionBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
+    public class TransactionBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : ICommand<TResponse>
     {
         private readonly ILogger<TransactionBehavior<TRequest, TResponse>> _logger;
         private readonly IUnitOfWork _unitOfWork;

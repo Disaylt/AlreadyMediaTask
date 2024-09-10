@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NasaAsteroid.Application.Commands
 {
-    public class AddOrUpdateAsteroidsCommand : IRequest<Unit>
+    public class AddOrUpdateAsteroidsCommand : ICommand<Unit>
     {
         public IEnumerable<AsteroidDto> Asteroids { get; set; } = Enumerable.Empty<AsteroidDto>();
     }
