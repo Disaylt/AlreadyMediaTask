@@ -16,10 +16,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AlreadyMedia.ServiceDefaults\AlreadyMedia.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\NasaAsteroid.Application\NasaAsteroid.Application.csproj" />
+    <ProjectReference Include="..\NasaAsteroid.Domain\NasaAsteroid.Domain.csproj" />
+    <ProjectReference Include="..\NasaAsteroid.Infrastructure\NasaAsteroid.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
