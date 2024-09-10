@@ -13,7 +13,7 @@ namespace NasaAsteroid.Domain.Entities
     {
         public string Name { get; private set; }
         public Mass Mass { get; private set; }
-        public DateOnly Year { get; private set; }
+        public Year Year { get; private set; }
         public Coordinates Coordinates { get; private set; }
         public FallStatus FallStaus { get; private set; }
         public NameType NameType { get; private set; }
@@ -28,7 +28,7 @@ namespace NasaAsteroid.Domain.Entities
             int id,
             string name,
             Mass mass,
-            DateOnly year,
+            Year year,
             Coordinates coordinates,
             FallStatus fall,
             NameType nameType,
@@ -94,14 +94,16 @@ namespace NasaAsteroid.Domain.Entities
             decimal? reclong,
             FallStatus fallStatus,
             NameType nameType,
-            string classType)
+            string classType,
+            int year)
         {
             return Mass.Equals(new Mass(mass))
                 && Coordinates.Equals(new Coordinates(reclong, reclat))
                 && Name.Equals(name)
                 && NameType.Equals(nameType)
                 && FallStaus.Equals(fallStatus)
-                && ClassType.Equals(classType);
+                && ClassType.Equals(classType)
+                && Year.Equals(new Year(year));
         }
     }
 }
