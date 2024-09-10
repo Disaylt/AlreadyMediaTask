@@ -1,0 +1,24 @@
+<span *ngIf="showError" >Ошибка!</span>
+<table mat-table [dataSource]="asteroids" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="year">
+      <th mat-header-cell *matHeaderCellDef> Год </th>
+      <td mat-cell *matCellDef="let element"> {{element.year}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="totalMasss">
+      <th mat-header-cell *matHeaderCellDef> Масса </th>
+      <td mat-cell *matCellDef="let element"> {{element.totalMasss}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="quantity">
+      <th mat-header-cell *matHeaderCellDef> Количество </th>
+      <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+    </ng-container>
+
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  

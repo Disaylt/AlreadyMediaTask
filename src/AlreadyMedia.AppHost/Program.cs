@@ -15,4 +15,7 @@ builder.AddProject<Projects.NasaAsteroid_WebApi>("nasa-asteroid-webapi")
     .WithReference(redis)
     .WithReference(nasaAsteroidsDb);
 
+builder.AddNpmApp("UI", "../AlreadyMedia-UI")
+    .WithEndpoint(targetPort: 5173, scheme: "http", env : "PORT");
+
 builder.Build().Run();

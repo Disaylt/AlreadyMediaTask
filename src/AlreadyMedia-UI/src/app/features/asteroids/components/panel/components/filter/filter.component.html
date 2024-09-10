@@ -1,0 +1,18 @@
+<div class="d-flex flex-column">
+    <mat-form-field class="example-full-width">
+        <mat-label>Максимальный год</mat-label>
+        <input matInput placeholder="2014" (input)="onInputMaxYear()"  [(ngModel)]="maxYear">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Минимальный год</mat-label>
+        <input matInput placeholder="1594" (input)="onInputMinYear()" [(ngModel)]="minYear">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Класс</mat-label>
+        <input matInput placeholder="C3" (input)="onInputClassType()"  [(ngModel)]="classType">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Название</mat-label>
+        <input matInput placeholder="Marsi" (input)="onInputName()"  [(ngModel)]="name">
+    </mat-form-field>
+</div>

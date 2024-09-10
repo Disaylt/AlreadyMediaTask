@@ -1,0 +1,31 @@
+<div class="d-flex flex-row justify-content-between mb-3">
+    <div>
+        <mat-form-field>
+            <mat-label>Сортировать по</mat-label>
+            <mat-select (selectionChange)="updateSortedValue()" [(ngModel)]="selectedSortedValues" name="sortedValues">
+              @for (sortedValue of sortedValues; track sortedValue) {
+                <mat-option [value]="sortedValue">{{sortedValue.view}}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Сортировка</mat-label>
+            <mat-select (selectionChange)="updateSortedType()" [(ngModel)]="selectedSortedTypes" name="sortedTypes">
+              @for (sortedType of sortedTypes; track sortedType) {
+                <mat-option [value]="sortedType">{{sortedType.view}}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+    </div>
+    <div>
+        <button mat-fab extended [cdkMenuTriggerFor]="filterTemplate">
+            <mat-icon>menu</mat-icon>
+            Фильтры
+          </button>
+    </div>
+</div>
+<ng-template #filterTemplate>
+    <div class="p-2 bg-body-tertiary rounded-3">
+        <app-filter></app-filter>
+    </div>
+</ng-template>
