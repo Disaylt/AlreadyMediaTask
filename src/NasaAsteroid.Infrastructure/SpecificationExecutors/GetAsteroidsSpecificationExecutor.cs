@@ -50,7 +50,7 @@ namespace NasaAsteroid.Infrastructure.SpecificationExecutors
 
             request = specification.Sort switch
             {
-                AsteroidSort.ByMass => request.OrderBy(x => x.Mass, specification.SortAsDesc),
+                AsteroidSort.ByMass => request.OrderBy(x => x.Mass.Value, specification.SortAsDesc),
                 AsteroidSort.ByYear => request.OrderBy(x => x.Year.Value, specification.SortAsDesc),
                 _ => request
             };

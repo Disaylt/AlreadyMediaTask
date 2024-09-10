@@ -24,7 +24,7 @@ namespace NasaAsteroid.WebApi.Controllers.Api.Group
             GetAsteroidsByYearGroupQuery request = new GetAsteroidsByYearGroupQuery { Specification = queries };
             IEnumerable<AsteroidYearGroupDto> asteroids = await _mediator.Send(request);
 
-            return Ok(asteroids);
+            return Ok(asteroids.Take(100));
         }
     }
 }
