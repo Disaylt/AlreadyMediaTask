@@ -24,7 +24,7 @@ namespace NasaAsteroid.WebApi.Controllers.Api
             GetAsteroidsQuery request = new GetAsteroidsQuery { Specification = queries };
             IEnumerable<AsteroidDto> asteroids = await _mediator.Send(request);
 
-            return Ok(asteroids.Take(100));
+            return Ok(asteroids);
         }
     }
 }

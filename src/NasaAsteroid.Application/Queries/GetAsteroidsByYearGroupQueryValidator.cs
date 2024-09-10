@@ -19,7 +19,7 @@ namespace NasaAsteroid.Application.Queries
                     return (s.FilterMaxYear.HasValue == false || s.FilterMaxYear < currentYear)
                         && (s.FilterMinYear.HasValue == false || s.FilterMinYear < currentYear);
                 })
-                .WithErrorCode("The selected year is greater than the current year.");
+                .WithMessage("The selected year is greater than the current year.");
         }
     }
 }
