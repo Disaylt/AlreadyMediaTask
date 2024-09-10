@@ -11,6 +11,8 @@ var nasaAsteroidProcessor = builder.AddProject<Projects.NasaAsteroid_Processor>(
     .WithReference(redis)
     .WithReference(nasaAsteroidsDb);
 
-builder.AddProject<Projects.NasaAsteroid_WebApi>("nasa-asteroid-webapi");
+builder.AddProject<Projects.NasaAsteroid_WebApi>("nasa-asteroid-webapi")
+    .WithReference(redis)
+    .WithReference(nasaAsteroidsDb);
 
 builder.Build().Run();
