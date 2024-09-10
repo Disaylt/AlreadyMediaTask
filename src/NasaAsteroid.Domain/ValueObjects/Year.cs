@@ -8,7 +8,7 @@ namespace NasaAsteroid.Domain.ValueObjects
 {
     public class Year : BaseValueObject
     {
-        public int Value { get; }
+        public int Value { get; private set; }
 
         public Year(int value)
         {

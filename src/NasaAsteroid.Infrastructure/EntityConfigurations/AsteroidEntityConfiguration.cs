@@ -19,9 +19,11 @@ namespace NasaAsteroid.Infrastructure.EntityConfigurations
 
             builder.OwnsOne(o => o.Coordinates);
             builder.OwnsOne(o => o.Mass);
-            builder.OwnsOne(o => o.Year);
+            builder.OwnsOne(o => o.Year, buildAction =>
+            {
+                buildAction.HasIndex(o => o.Value);
+            });
 
-            builder.HasIndex(o => o.Year.Value);
             builder.HasIndex(o => o.Name);
             builder.HasIndex(o => o.ClassType);
 

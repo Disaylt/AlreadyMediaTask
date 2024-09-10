@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NasaAsteroid.Infrastructure.Database;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace NasaAsteroid.Infrastructure.Migrations
 {
     [DbContext(typeof(AsteroidDbContext))]
-    partial class AsteroidDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240910070740_ChangeYearColumn")]
+    partial class ChangeYearColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -104,8 +107,6 @@ namespace NasaAsteroid.Infrastructure.Migrations
                                 .HasColumnType("integer");
 
                             b1.HasKey("AsteroidId");
-
-                            b1.HasIndex("Value");
 
                             b1.ToTable("Asteroids", "nasaAsteroids");
 
