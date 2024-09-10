@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using NasaAsteroid.Application.Models;
+using NasaAsteroid.Application.Specifications;
 using NasaAsteroid.Domain.Enums;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,6 @@ namespace NasaAsteroid.Application.Queries
 {
     public class GetAsteroidsQuery : IRequest<IEnumerable<AsteroidDto>>
     {
-        public required AsteroidsQueriesDto Queries { get; set; }
+        public required GetAsteroidsSpecification Queries { get; set; }
     }
 }
