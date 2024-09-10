@@ -42,7 +42,7 @@ namespace NasaAsteroid.Application.Utilities
                 Fall = _asteroidFallStatusUtility.Convert(asteroid.Fall),
                 Name = asteroid.Name,
                 NameType = _asteroidNameTypeUtility.Convert(asteroid.Name),
-                Year = DateOnly.FromDateTime(asteroid.Year)
+                Date = DateOnly.FromDateTime(asteroid.Date)
             };
         }
     }

@@ -28,7 +28,7 @@ namespace NasaAsteroid.Application.Models
         public string Fall { get; set; } = string.Empty;
 
         [JsonPropertyName("year")]
-        public DateTime Year { get; set; }
+        public DateTime Date { get; set; }
 
         [JsonPropertyName("reclat")]
         public string? Reclat { get; set; }

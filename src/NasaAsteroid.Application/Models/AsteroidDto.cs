@@ -15,7 +15,7 @@ namespace NasaAsteroid.Application.Models
         public double? Mass { get; init; }
         public decimal? Longitude { get; init; }
         public decimal? Latitude { get; init; }
-        public DateOnly Year { get; init; }
+        public DateOnly Date { get; init; }
         public FallStatus Fall { get; init; }
         public NameType NameType { get; init; }
     }
