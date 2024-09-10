@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace NasaAsteroid.Application.DomainEventHandlers
 {
-    internal class NewAsteroidCoordinatesNotificationEventHandler : INotificationHandler<NewAsteroidCoordinatesEvent>
+    public class NewAsteroidCoordinatesNotificationEventHandler : INotificationHandler<NewAsteroidCoordinatesEvent>
     {
         public ILogger<NewAsteroidCoordinatesNotificationEventHandler> _logger;
 
