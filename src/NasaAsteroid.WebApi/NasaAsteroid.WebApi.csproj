@@ -18,4 +18,8 @@
     <ProjectReference Include="..\AlreadyMedia.ServiceDefaults\AlreadyMedia.ServiceDefaults.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>
