@@ -8,7 +8,7 @@ namespace NasaAsteroid.Domain.Seed
 {
     public interface ISpecificationExecutor<TSpecification, TRepsonse> 
         where TSpecification : ISpecification 
-        where TRepsonse : class, IEntity
+        where TRepsonse : class
     {
         Task<IEnumerable<TRepsonse>> ExecuteAsync(TSpecification specification);
     }
