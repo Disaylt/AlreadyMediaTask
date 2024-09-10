@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace NasaAsteroid.Domain.Enums
 {
-    public enum AsteroidGroup
-    {
-        None = 0,
-        Year
-    }
-
     public enum AsteroidSort
     {
+        Default,
         ByYear,
         ByQuantity,
         ByMass,
