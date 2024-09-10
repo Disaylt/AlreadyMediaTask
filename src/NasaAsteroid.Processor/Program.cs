@@ -24,7 +24,7 @@ builder.Services.AddQuartz(opt =>
         .WithIdentity($"{asteroidsUplodingJobkey.Name}-t")
         .StartAt(DateTime.Now.AddSeconds(10))
         .WithSimpleSchedule(scheduleOpt => scheduleOpt
-        .WithIntervalInSeconds(30)
+        .WithIntervalInSeconds(120)
         .RepeatForever()));
 });
 

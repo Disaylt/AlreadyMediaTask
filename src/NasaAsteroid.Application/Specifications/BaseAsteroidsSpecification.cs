@@ -19,7 +19,7 @@ namespace NasaAsteroid.Application.Specifications
 
         public virtual string GetMetaData()
         {
-            return $"{FilterMinYear}|{FilterMaxYear}|{ClassType}|{NamePart}|{Sort}";
+            return $"{FilterMinYear}|{FilterMaxYear}|{ClassType}|{NamePart}|{SortAsDesc}|{Sort}";
         }
     }
 }

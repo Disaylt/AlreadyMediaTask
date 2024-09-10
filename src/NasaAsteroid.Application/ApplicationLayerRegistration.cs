@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using Microsoft.Extensions.DependencyInjection;
 using NasaAsteroid.Application.Behaviors;
 using NasaAsteroid.Application.Services;
 using NasaAsteroid.Application.Utilities;
@@ -17,6 +18,8 @@ namespace NasaAsteroid.Application
         {
             collection.AddApplicationServices();
             collection.AddUtilities();
+
+            collection.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
             collection.AddMediatR(cfg =>
             {
