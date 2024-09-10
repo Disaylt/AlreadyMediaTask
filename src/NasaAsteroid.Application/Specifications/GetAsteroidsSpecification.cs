@@ -14,6 +14,7 @@ namespace NasaAsteroid.Application.Specifications
         public int? FilterMaxYear { get; set; }
         public string? ClassType { get; set; }
         public string? NamePart { get; set; }
+        public bool SortAsDesc { get; set; }
         public AsteroidSort Sort { get; set; } = AsteroidSort.Default;
 
         public string GetMetaData()
