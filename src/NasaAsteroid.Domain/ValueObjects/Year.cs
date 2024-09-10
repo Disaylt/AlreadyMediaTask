@@ -8,19 +8,19 @@ namespace NasaAsteroid.Domain.ValueObjects
 {
     public class Year : BaseValueObject
     {
-        public int Valie { get; }
+        public int Value { get; }
 
         public Year(int value)
         {
             if (value > DateTime.UtcNow.Year) 
                 throw new ArgumentException("Year discovered exceeds the current year");
 
-            Valie = value;
+            Value = value;
         }
 
         protected override IEnumerable<object?> GetEqualityComponents()
         {
-            yield return Valie;
+            yield return Value;
         }
     }
 }
